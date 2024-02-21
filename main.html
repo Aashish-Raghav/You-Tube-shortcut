@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+    </head>
+  <body>
+
+      <h1>Welcome to My Way</h1>
+    <div class = "main">
+        <input type="text" id="search" autocomplete="off"/>
+        <button onclick="myFunction()">Search</button>
+    </div>
+    <script>
+      function myFunction() {
+        let url = "https://www.youtube.com/results?search_query=";
+        let text = document.getElementById("search").value;
+        const myArray = text.split(" ");
+        myArray.forEach((element) => {
+          url = url + element + "+";
+        });
+        location.replace(url);
+      }
+    </script>
+  </body>
+</html>
